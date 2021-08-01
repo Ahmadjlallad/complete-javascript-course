@@ -91,6 +91,7 @@ console.log(z === window.z);
 
 ///////////////////////////////////////
 // The this Keyword in Practice
+*/
 console.log(this);
 
 const calcAge = function (birthYear) {
@@ -118,13 +119,14 @@ const matilda = {
   year: 2017,
 };
 
-matilda.calcAge = jonas.calcAge;
+matilda.calcAge = jonas.calcAge; // This is a copy of the function method borrowing
+// this keyword from the jonas object is dynamic
 matilda.calcAge();
 
 const f = jonas.calcAge;
-f();
+f(); // give undefined as this keyword is not attache to the Object
 
-
+/*
 ///////////////////////////////////////
 // Regular Functions vs. Arrow Functions
 // var firstName = 'Matilda';
@@ -212,6 +214,7 @@ marriedJessica.lastName = 'Davis';
 console.log('Before marriage:', jessica);
 console.log('After marriage: ', marriedJessica);
 // marriedJessica = {};
+*/
 
 // Copying objects
 const jessica2 = {
@@ -220,14 +223,15 @@ const jessica2 = {
   age: 27,
   family: ['Alice', 'Bob'],
 };
-
 const jessicaCopy = Object.assign({}, jessica2);
+// Object.assign alow us to marge
+// 2 objects and its create a shallow copy
+// so if you have object with another object inside it won't be copied
+
 jessicaCopy.lastName = 'Davis';
 
 jessicaCopy.family.push('Mary');
 jessicaCopy.family.push('John');
-
+// .family[] is a reference to the array
 console.log('Before marriage:', jessica2);
 console.log('After marriage: ', jessicaCopy);
-*/
-
