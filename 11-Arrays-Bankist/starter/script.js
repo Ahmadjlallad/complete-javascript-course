@@ -74,3 +74,70 @@ const currencies = new Map([
 const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
 /////////////////////////////////////////////////
+// flat
+const arr = [
+  [`ahmad`, `moh`, `ayham`, `ibrahim`],
+  [15, 56, 61],
+  ['aa', 'b', 'd', 'd', 'a'],
+  1,
+  3,
+  5,
+];
+// console.log(arr);
+// one level deab by default 1 but we can change it
+// console.log(arr.flat(2));
+// map with flat
+// console.log(
+//   arr.flatMap((myName, i) => {
+//     return [i, myName];
+//   })
+// );
+
+// 100 Dice roles
+// const dice100 = Array.from({ length: 100 }, () =>
+//   Math.trunc(Math.trunc(Math.random() * (6 - 1 + 1) + 1))
+// );
+// console.log(dice100);
+// console.log(dice100.reduce((acc, curr) => acc + curr, 0) / dice100.length);
+// console.log(dice100.filter(one => one === 1).length);
+// console.log(dice100.filter(two => two === 2).length);
+// console.log(dice100.filter(three => three === 3).length);
+// console.log(dice100.filter(four => four === 4).length);
+// console.log(dice100.filter(five => five === 5).length);
+// console.log(dice100.filter(six => six === 6).length);
+// console.log(dice100.findIndex(six => six === 6));
+/*
+let accountss = {};
+const sums = accounts
+  .flatMap(move => move.movements)
+  .reduce((acc, curr, i) => {
+    if (curr > 0) {
+      console.log(curr);
+      if (accountss?.deposit) {
+        accountss.deposit += curr;
+      } else {
+        accountss.deposit = curr;
+      }
+      console.log(accountss.deposit);
+    } else {
+      if (accountss?.width) {
+        accountss.width += curr;
+      } else {
+        accountss.width = curr;
+      }
+    }
+  }, 0);
+console.log(accountss);
+
+const { dep: dep = 0, width: width = 0 } = accounts
+  .flatMap(move => move.movements)
+  .reduce(
+    (acc, curr) => {
+      // curr > 0 ? (acc.dep += curr) : (acc.width += curr);
+      acc[curr > 0 ? 'dep' : 'width'] += curr;
+      return acc;
+    },
+    { dep: 0, width: 0 }
+  );
+console.log(dep, width);
+*/
