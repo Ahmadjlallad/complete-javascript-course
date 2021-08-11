@@ -1,4 +1,5 @@
 {
   "cSpell.words": ["Gnarby", "Hummels", "Lewandowski"],
-  "liveServer.settings.multiRootWorkspaceName": "complete-javascript-course"
+  "liveServer.settings.multiRootWorkspaceName": "complete-javascript-course",
+  "livePreview.defaultPreviewPath": "/13-Advanced-DOM-Bankist/starter/index.html"
 }
