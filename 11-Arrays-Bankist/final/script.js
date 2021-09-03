@@ -572,7 +572,7 @@ const overalBalance2 = accounts
   .reduce((acc, mov) => acc + mov, 0);
 console.log(overalBalance2);
 
-
+*/
 ///////////////////////////////////////
 // Sorting Arrays
 
@@ -602,7 +602,6 @@ console.log(movements);
 // });
 movements.sort((a, b) => b - a);
 console.log(movements);
-
 
 ///////////////////////////////////////
 // More Ways of Creating and Filling Arrays
@@ -637,7 +636,7 @@ labelBalance.addEventListener('click', function () {
   const movementsUI2 = [...document.querySelectorAll('.movements__value')];
 });
 
-
+/*
 ///////////////////////////////////////
 // Array Methods Practice
 
